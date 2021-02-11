@@ -9,6 +9,7 @@ const useStyles = createUseStyles({
         color: 'black',
         border: '2px solid black',
         borderRadius: '25px',
+        backgroundColor: 'azure',
         width: '98%',
         height: '15vh',
         display: 'flex',

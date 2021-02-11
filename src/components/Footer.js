@@ -11,13 +11,15 @@ const useStyles = createUseStyles({
         position: 'fixed',
         bottom: 0,
         height: '6vh', 
-        width: '100%',       
+        width: '100%',  
+        borderTop: '1px solid black',
+        backgroundColor: 'azure',     
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
         fontWeight: 'bold',
-        fontSize: '1.8rem',
+        fontSize: '2rem',
         marginTop: '1rem'
     },
     text: {
