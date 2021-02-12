@@ -1,5 +1,6 @@
 // react imports
 import React from 'react';
+import { Link } from 'react-router-dom';
 // Style imports
 import {createUseStyles} from 'react-jss';
 import dadImage from '../assets/dad-logo.jpg';
@@ -9,7 +10,7 @@ const useStyles = createUseStyles({
         color: 'black',
         border: '2px solid black',
         borderRadius: '25px',
-        backgroundColor: 'azure',
+        // backgroundColor: 'azure',
         width: '98%',
         height: '15vh',
         display: 'flex',
@@ -27,6 +28,14 @@ const useStyles = createUseStyles({
         fontFamily: 'AmaticSC',
         fontSize: '9rem',
         zIndex: '10'
+    },
+    linkStlye: {
+        fontFamily: 'AmaticSC',
+        fontSize: '2.5rem',
+        margin: "0 65px 0 65px",
+        '&:visited': {
+            color: 'blue'
+        }
     }
 });
 
@@ -35,6 +44,12 @@ const Navbar = () => {
 
     return (
         <div className={ classes.root }>
+            <Link 
+                className={ classes.linkStlye }
+                to="/newjoke"
+            >
+                Submit A New Joke
+            </Link>
             <img 
                 className={ classes.titleImage }
                 src={ dadImage } 
@@ -44,6 +59,12 @@ const Navbar = () => {
             >
                 Jokes!
             </h1>
+            <Link 
+                className={ classes.linkStlye }
+                to="/docs"
+            >
+                API Documentation
+            </Link>
         </div>
     )
 };
