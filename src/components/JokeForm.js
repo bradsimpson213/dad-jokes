@@ -15,7 +15,8 @@ const useStyles = createUseStyles({
     },
     submitform: {
         display: 'flex',
-        flexDirection: 'column'
+        flexDirection: 'column',
+        width: '60%'
     }
 });
 
@@ -41,7 +42,7 @@ const JokeForm = () => {
             >
                 <div>
                     <label 
-                        for="joktext"
+                        for="joketext"
                     >
                         Joke body: 
                     </label>
@@ -56,7 +57,7 @@ const JokeForm = () => {
                     <label 
                         for="punchline" 
                     >
-                        Joke body: 
+                        Joke Punchline: 
                     </label>
                     <textarea 
                         name="punchline"

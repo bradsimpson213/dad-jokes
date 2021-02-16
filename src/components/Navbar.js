@@ -1,6 +1,7 @@
 // react imports
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FcHome, FcMenu } from 'react-icons/fc'
 // Style imports
 import {createUseStyles} from 'react-jss';
 import dadImage from '../assets/dad-logo.jpg';
@@ -32,10 +33,15 @@ const useStyles = createUseStyles({
     linkStlye: {
         fontFamily: 'AmaticSC',
         fontSize: '2.5rem',
-        margin: "0 65px 0 65px",
+        margin: "0 85px 0 85px",
         '&:visited': {
             color: 'blue'
         }
+    },
+    linkIcon: {
+        height: '75px',
+        width: '75px',
+        margin: '0 60px 0 60px'
     }
 });
 
@@ -44,6 +50,12 @@ const Navbar = () => {
 
     return (
         <div className={ classes.root }>
+            <Link 
+            
+            to="/"
+            >
+                <FcHome className={ classes.linkIcon } />
+            </Link>
             <Link 
                 className={ classes.linkStlye }
                 to="/newjoke"
@@ -65,6 +77,7 @@ const Navbar = () => {
             >
                 API Documentation
             </Link>
+            <FcMenu className={ classes.linkIcon } />
         </div>
     )
 };
