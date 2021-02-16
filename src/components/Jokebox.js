@@ -36,6 +36,10 @@ const Jokebox = () => {
     return (
         <div className={ classes.root }>
             <h1>Jokes will go here...</h1>
+            <div className={ classes.jokeDetail }>
+                <h2>Funny joke here</h2>
+                <h2>Funny punchline here</h2>
+            </div>
             <div className={ classes.buttonContainer }>
                 <button 
                     className={ classes.button }

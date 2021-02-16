@@ -5,6 +5,7 @@ import { Route, Switch } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Jokebox from './components/Jokebox';
+import JokeForm from './components/JokeForm';
 //Style imports
 import {createUseStyles} from 'react-jss';
 import logo from './logo.svg';
@@ -34,6 +35,13 @@ const App = () => {
             path="/"
             render={ () => (
               <Jokebox />
+            )}
+          />
+          <Route 
+            exact 
+            path="/newjoke"
+            render={ () => (
+              <JokeForm />
             )}
           />
         </Switch>
