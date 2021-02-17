@@ -17,6 +17,9 @@ const useStyles = createUseStyles({
         display: 'flex',
         flexDirection: 'column',
         width: '60%'
+    },
+    textField: {
+        width: '400px'
     }
 });
 
@@ -46,7 +49,8 @@ const JokeForm = () => {
                     >
                         Joke body: 
                     </label>
-                    <textarea 
+                    <textarea
+                        className={ classes.textField } 
                         name="joketext" 
                         type='text'
                         value={ jokeBody }
@@ -59,7 +63,8 @@ const JokeForm = () => {
                     >
                         Joke Punchline: 
                     </label>
-                    <textarea 
+                    <textarea
+                        className={ classes.textField }  
                         name="punchline"
                         type="text"
                         value={ punchline }
