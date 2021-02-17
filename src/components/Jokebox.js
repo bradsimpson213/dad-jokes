@@ -1,5 +1,7 @@
 // React imports
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+// Custom imports
+import starterJokes from '../starterdata'
 // Styler imports
 import {createUseStyles} from 'react-jss';
 
@@ -32,13 +34,18 @@ const useStyles = createUseStyles({
 
 const Jokebox = () => {
     const classes = useStyles();
+    const [ joke, setJoke] = useState(starterJokes[Math.floor((Math.random()*starterJokes.length))]);
+
+    const getJoke = () => {
+        setJoke(starterJokes[Math.floor((Math.random()*starterJokes.length))]);
+    };
 
     return (
         <div className={ classes.root }>
             <h1>Jokes will go here...</h1>
             <div className={ classes.jokeDetail }>
-                <h2>Funny joke here</h2>
-                <h2>Funny punchline here</h2>
+                <h2>{ joke.jokeBody }</h2>
+                <h2>{ joke.jokePunchline }</h2>
             </div>
             <div className={ classes.buttonContainer }>
                 <button 
@@ -50,6 +57,7 @@ const Jokebox = () => {
                 <button 
                     className={ classes.button }
                     style={{ backgroundColor: 'green' }}
+                    onClick={ getJoke }
                 >
                     Get New Joke
                 </button>

@@ -1,4 +1,4 @@
-starterJokes = [
+const starterJokes = [
     {
         jokeId: 1,
         jokeBody: "What do mermaids wash their fins with?",
@@ -21,12 +21,48 @@ starterJokes = [
     },
     {
         jokeId: 5,
-        jokeBody: "",
-        jokePunchline: ""
+        jokeBody: "What kind of car does an egg drive?",
+        jokePunchline: "A Yolkswagon..."
     },
     {
-        jokeId: 4,
-        jokeBody: "",
-        jokePunchline: ""
+        jokeId: 6,
+        jokeBody: "What do you call someone who gets mad when they don't have any bread?",
+        jokePunchline: "Lack toast intolerant..."
     },
-]
+    {
+        jokeId: 7,
+        jokeBody: "What did the plumber say to the singer?",
+        jokePunchline: "Nice pipes..."
+    },
+    {
+        jokeId: 8,
+        jokeBody: "What do you call a lazy doctor?",
+        jokePunchline: "Dr Doo-little..."
+    },
+    {
+        jokeId: 9,
+        jokeBody: "Did you know on average people want 3 covers on the bed at all times?",
+        jokePunchline: "That's just a blanket statement..."
+    },
+    {
+        jokeId: 10,
+        jokeBody: "What did the pot eat on its birthday?",
+        jokePunchline: "Pancakes..."
+    },
+    {
+        jokeId: 11,
+        jokeBody: "Where would you grow a chef?",
+        jokePunchline: "Bakersfield..."
+    },
+    {
+        jokeId: 12,
+        jokeBody: "What do you call a camel in a drought?",
+        jokePunchline: "A dry humper..."
+    },
+    {
+        jokeId: 13,
+        jokeBody: "How do you get a squirrel out of a tree?",
+        jokePunchline: "Show him your nutts..."
+    },
+];
+export default starterJokes;
