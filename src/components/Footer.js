@@ -34,10 +34,9 @@ const useStyles = createUseStyles({
 })
 const Footer = () => {
     const classes = useStyles();
-    const { angel, linkedin, github, email } = profileLinks;
+    const { linkedin, github, email } = profileLinks;
     return (
         <footer className={ classes.footer }>
-       
             <span className={ classes.text }>Created by Brad Simpson ©2021</span>
             <a href={github} >
                 <FaGithub className={ classes.icons } />
