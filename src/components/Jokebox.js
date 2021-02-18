@@ -6,6 +6,7 @@ import starterJokes from '../starterdata';
 // Styler imports
 import {createUseStyles} from 'react-jss';
 
+
 const useStyles = createUseStyles({
     root: {
         height: '60%',
@@ -13,6 +14,9 @@ const useStyles = createUseStyles({
         border: '2px solid black',
         borderRadius: '15px',
         backgroundColor: 'azure'
+    },
+    jokeDetail: {
+        fontSize: '1.5rem'
     },
     buttonContainer: {
         display: 'flex',
@@ -36,13 +40,17 @@ const useStyles = createUseStyles({
 const Jokebox = () => {
     const classes = useStyles();
     const [ joke, setJoke] = useState(starterJokes[Math.floor((Math.random()*starterJokes.length))]);
-    const [ hidden, toggleHidden] = useToggle(true);
+    const [ hidden, setHidden] = useState(true);
 
 
     const getJoke = () => {
         setJoke(starterJokes[Math.floor((Math.random()*starterJokes.length))]);
-
+        setHidden(true);
     };
+
+    const punchLine = () => {
+       setHidden(false);
+    }
 
     return (
         <div className={ classes.root }>
@@ -54,7 +62,7 @@ const Jokebox = () => {
                     { joke.jokeBody }
                 </h1>
                 <h1 
-                    className={ classes.jokeAnswer }
+                    style={ { opacity: hidden ? '0' : '1' } }
                 >
                     { joke.jokePunchline }
                 </h1>
@@ -63,6 +71,7 @@ const Jokebox = () => {
                 <button 
                     className={ classes.button }
                     style={{ backgroundColor: 'blue' }}
+                    onClick={ punchLine }
                 >
                     Get Punchline
                 </button>
