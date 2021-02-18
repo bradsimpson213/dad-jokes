@@ -18,8 +18,31 @@ const useStyles = createUseStyles({
         flexDirection: 'column',
         width: '60%'
     },
+    formInput: {
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        margin: '0 0 15px 0'
+    },
+    label: {
+        fontSize: '1.5rem'       
+    },
     textField: {
         width: '400px'
+    },
+    button: {
+        color: 'white',
+        backgroundColor: 'blue',
+        border: '1px solid gray',
+        borderRadius: '15px',
+        boxShadow: '3px 6px #888888',
+        fontFamily: 'AmaticSC',
+        fontSize: '1.6rem',
+        fontWeight: '900',
+        height: '4rem',
+        width: '7.5rem',
+        margin: '0 10px 0 10px'
     }
 });
 
@@ -38,13 +61,14 @@ const JokeForm = () => {
 
     return (
         <div className={ classes.root }>
-            <h1>Submit your new jobes here...</h1>
+            <h1>Submit your new jokes here...</h1>
             <form 
                 className={ classes.submitForm }
                 onSubmit={ handleSubmit }
             >
-                <div>
-                    <label 
+                <div className={ classes.formInput }>
+                    <label
+                        className={ classes.label } 
                         for="joketext"
                     >
                         Joke body: 
@@ -57,11 +81,12 @@ const JokeForm = () => {
                         onChange={ setJokeBody }
                     />
                 </div>
-                <div>
+                <div className={ classes.formInput }>
                     <label 
-                        for="punchline" 
+                        for="punchline"
+                        className={ classes.label }  
                     >
-                        Joke Punchline: 
+                        Punchline: 
                     </label>
                     <textarea
                         className={ classes.textField }  
@@ -71,7 +96,8 @@ const JokeForm = () => {
                         onChange={ setPunchline }
                     />
                 </div>
-                <button 
+                <button
+                    className={ classes.button } 
                     type="submit"
                 >
                     Submit Joke
