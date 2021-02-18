@@ -1,7 +1,8 @@
 // React imports
 import React from 'react';
 // Custom hooks
-import useInputState from "../hooks/useInputState"
+import useInputState from "../hooks/useInputState";
+import starterJokes from '../starterdata';
 // Style imports
 import {createUseStyles} from 'react-jss';
 
@@ -11,7 +12,9 @@ const useStyles = createUseStyles({
         width: '75%',
         border: '2px solid black',
         borderRadius: '15px',
-        backgroundColor: 'azure'
+        backgroundColor: 'azure',
+        fontFamily: 'AmaticSC',
+        fontWeight: '900'
     },
     submitform: {
         display: 'flex',
@@ -26,7 +29,9 @@ const useStyles = createUseStyles({
         margin: '0 0 15px 0'
     },
     label: {
-        fontSize: '1.5rem'       
+        fontSize: '2.5rem',
+        fontFamily: 'AmaticSC',
+        fontWeight: '900'       
     },
     textField: {
         width: '400px'
@@ -52,10 +57,15 @@ const JokeForm = () => {
     const [punchline, setPunchline, resetPunchLine] = useInputState();
 
     const handleSubmit = (event) => {
-        event.preventDefault()
-        console.log("Yay you submitted")
-        resetJokeBody()
-        resetPunchLine()
+        event.preventDefault();
+        const newJoke = {
+            jokeId: starterJokes.length,
+            jokeBody: jokeBody,
+            jokePunchline: punchline
+        };
+        starterJokes.push(newJoke);
+        resetJokeBody();
+        resetPunchLine();
 
     }
 

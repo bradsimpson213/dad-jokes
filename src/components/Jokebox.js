@@ -1,7 +1,6 @@
 // React imports
 import React, { useEffect, useState } from 'react';
 // Custom imports
-import useToggle from '../hooks/useToggle';
 import starterJokes from '../starterdata';
 // Styler imports
 import {createUseStyles} from 'react-jss';
@@ -13,10 +12,15 @@ const useStyles = createUseStyles({
         width: '75%',
         border: '2px solid black',
         borderRadius: '15px',
-        backgroundColor: 'azure'
+        backgroundColor: 'azure',
+        fontFamily: 'AmaticSC',
+        padding: '10px 45px 10px 45px'
     },
     jokeDetail: {
-        fontSize: '1.5rem'
+        fontSize: '1.7rem'
+    },
+    jokeText: {
+        fontWeight: '900'
     },
     buttonContainer: {
         display: 'flex',
@@ -62,7 +66,7 @@ const Jokebox = () => {
                     { joke.jokeBody }
                 </h1>
                 <h1 
-                    style={ { opacity: hidden ? '0' : '1' } }
+                    style={ { opacity: hidden ? '0' : '1', transition: '1.0s' } }
                 >
                     { joke.jokePunchline }
                 </h1>
