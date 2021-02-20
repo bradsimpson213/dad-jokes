@@ -66,7 +66,7 @@ const Jokebox = () => {
                     { joke.jokeBody }
                 </h1>
                 <h1 
-                    style={ { opacity: hidden ? '0' : '1', transition: '1.0s' } }
+                    style={ hidden ? { opacity: '0', transition: 'None' } : { opacity: '1', transition: 'opacity 2.0s' } }
                 >
                     { joke.jokePunchline }
                 </h1>
