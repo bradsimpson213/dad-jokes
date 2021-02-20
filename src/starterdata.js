@@ -64,5 +64,21 @@ const starterJokes = [
         jokeBody: "How do you get a squirrel out of a tree?",
         jokePunchline: "Show him your nutts..."
     },
+    {
+        jokeId: 14,
+        jokeBody: "Why don't eggs tell jokes?",
+        jokePunchline: "They'd crack each other up..."
+    },
+    {
+        jokeId: 15,
+        jokeBody: "Did you hear the rumor about butter?",
+        jokePunchline: "Well, I'm not going to spread it..."
+    },
+    {
+        jokeId: 16,
+        jokeBody: "How many tickles does it take to make an octopus laugh?",
+        jokePunchline: "Ten tickles..."
+    },
+
 ];
 export default starterJokes;
