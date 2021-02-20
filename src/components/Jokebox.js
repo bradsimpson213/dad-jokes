@@ -43,7 +43,7 @@ const useStyles = createUseStyles({
 
 const Jokebox = () => {
     const classes = useStyles();
-    const [ joke, setJoke] = useState(starterJokes[Math.floor((Math.random()*starterJokes.length))]);
+    const [ joke, setJoke] = useState(starterJokes[Math.floor((Math.random() * starterJokes.length))]);
     const [ hidden, setHidden] = useState(true);
 
 
@@ -86,6 +86,7 @@ const Jokebox = () => {
                 >
                     Get New Joke
                 </button>
+                { /* add joke ratings with emojis to pick rating */}
             </div>
         </div>
     )
