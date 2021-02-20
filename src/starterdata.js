@@ -79,6 +79,42 @@ const starterJokes = [
         jokeBody: "How many tickles does it take to make an octopus laugh?",
         jokePunchline: "Ten tickles..."
     },
-
+    {
+        jokeId: 17,
+        jokeBody: "What concert costs just 45 cents?",
+        jokePunchline: "50 Cent featuring Nickelback..."
+    },
+    {
+        jokeId: 18,
+        jokeBody: "How do you make a tissue dance?",
+        jokePunchline: "You put a little boogie in it..."
+    },
+    {
+        jokeId: 19,
+        jokeBody: "Why did the math book look so sad?",
+        jokePunchline: "Because of all of its problems..."
+    },
+    {
+        jokeId: 20,
+        jokeBody: "What do you call cheese that isn't yours?",
+        jokePunchline: "Nacho cheese..."
+    },
+    {
+        jokeId: 21,
+        jokeBody: "What kind of shoes do ninjas wear?",
+        jokePunchline: "Sneakers..."
+    },
+    {
+        jokeId: 22,
+        jokeBody: "How does a penguin build its house?",
+        jokePunchline: "Igloos it together..."
+    },
+    {
+        jokeId: 23,
+        jokeBody: "When does a joke become a dad joke?",
+        jokePunchline: "When it becomes apparent..."
+    },
 ];
+
 export default starterJokes;
+
