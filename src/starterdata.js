@@ -249,6 +249,22 @@ const starterJokes = [
         jokeBody: "A slice of apple pie is $2.50 in Jamaica and $3.00 in the Bahamas...",
         jokePunchline: "These are the pie rates of the Caribbean..."
     },
+
+    {
+        jokeId: 51,
+        jokeBody: "How do you find Will Smith in a snowstorm?",
+        jokePunchline: "You look for fresh prints..."
+    },
+    {
+        jokeId: 52,
+        jokeBody: "What do you call a bundle of hay in a church?",
+        jokePunchline: "Christian Bale..."
+    },
+    {
+        jokeId: 53,
+        jokeBody: "What’s an astronaut’s favorite part of the computer?",
+        jokePunchline: "The space bar..."
+    }
 ];
 
 export default starterJokes;
