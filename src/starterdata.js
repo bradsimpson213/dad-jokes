@@ -279,13 +279,54 @@ const starterJokes = [
         jokeId: 56,
         jokeBody: "How did Darth Vader know what Luke got him for Christmas?",
         jokePunchline: "He felt his presents..."
+    },
+    {
+        jokeId: 57,
+        jokeBody: "Why can’t you trust atoms?",
+        jokePunchline: "They make up everything..."
+    },
+    {
+        jokeId: 58,
+        jokeBody: "What was Forrest Gump’s email password?",
+        jokePunchline: "1forrest1..."
+    },
+    {
+        jokeId: 59,
+        jokeBody: "What did one ocean say to the other ocean?",
+        jokePunchline: "Nothing, they just waved..."
+    },
+    {
+        jokeId: 60,
+        jokeBody: "Why don’t oysters share their pearls?",
+        jokePunchline: " Because they’re shellfish..."
+    },
+    {
+        jokeId: 61,
+        jokeBody: "What do you call the boss at Old McDonald’s Farm?",
+        jokePunchline: "The CIEIO..."
+    },
+    {
+        jokeId: 62,
+        jokeBody: "How do astronomers organize a party?",
+        jokePunchline: " They planet..."
+    },
+    {
+        jokeId: 63,
+        jokeBody: "How do you deal with a fear of speed bumps?",
+        jokePunchline: "You slowly get over it..."
+    },
+    {
+        jokeId: 64,
+        jokeBody: "What was the most ground-breaking invention?",
+        jokePunchline: "A shovel..."
+    },
+    {
+        jokeId: 65,
+        jokeBody: "How did the hipster burn his mouth?",
+        jokePunchline: "He ate the pizza before it was cool..."
     }
 ];
 
 export default starterJokes;
 
-// {
-//     jokeId: 54,
-//     jokeBody: "",
-//     jokePunchline: ""
-// }
+
