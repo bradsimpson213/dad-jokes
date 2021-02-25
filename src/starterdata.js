@@ -264,8 +264,28 @@ const starterJokes = [
         jokeId: 53,
         jokeBody: "What’s an astronaut’s favorite part of the computer?",
         jokePunchline: "The space bar..."
+    },
+    {
+        jokeId: 54,
+        jokeBody: "Why did the scarecrow win an award?",
+        jokePunchline: "Because he was outstanding in his field..."
+    },
+    {
+        jokeId: 55,
+        jokeBody: "What did the grape do when he got stepped on?",
+        jokePunchline: "He let out a little wine..."
+    },
+    {
+        jokeId: 56,
+        jokeBody: "How did Darth Vader know what Luke got him for Christmas?",
+        jokePunchline: "He felt his presents..."
     }
 ];
 
 export default starterJokes;
 
+// {
+//     jokeId: 54,
+//     jokeBody: "",
+//     jokePunchline: ""
+// }
