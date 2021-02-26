@@ -8,7 +8,6 @@ import Jokebox from './components/Jokebox';
 import JokeForm from './components/JokeForm';
 //Style imports
 import {createUseStyles} from 'react-jss';
-import logo from './logo.svg';
 import './App.css';
 
 const useStyles = createUseStyles({
