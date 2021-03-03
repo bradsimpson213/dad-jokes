@@ -58,7 +58,7 @@ const Jokebox = () => {
 
     return (
         <div className={ classes.root }>
-            <h3>Your next Dad joke is...</h3>
+            <h2>Your next Dad joke is...</h2>
             <div className={ classes.jokeDetail }>
                 <h1 
                     className={ classes.jokeText }

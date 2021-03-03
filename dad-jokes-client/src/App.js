@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Jokebox from './components/Jokebox';
 import JokeForm from './components/JokeForm';
+import APIDocs from './components/APIDocs';
 //Style imports
 import {createUseStyles} from 'react-jss';
 import './App.css';
@@ -41,6 +42,13 @@ const App = () => {
             path="/newjoke"
             render={ () => (
               <JokeForm />
+            )}
+          />
+          <Route 
+            exact 
+            path="/docs"
+            render={ () => (
+              <APIDocs />
             )}
           />
         </Switch>
