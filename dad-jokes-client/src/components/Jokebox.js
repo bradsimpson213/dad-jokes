@@ -88,6 +88,10 @@ const Jokebox = () => {
                 </button>
                 { /* add joke ratings with emojis to pick rating */}
             </div>
+            <div>
+            <input type="checkbox" id="scales" name="scales"/>
+            <label for="scales">Auto Jokes</label>
+            </div>
         </div>
     )
 };

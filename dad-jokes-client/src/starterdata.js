@@ -20,7 +20,7 @@ const starterJokes = [
     },
     {
         jokeId: 4,
-        jokeBody: "Did you hear Steve Harvery and his wife got into a fight?",
+        jokeBody: "Did you hear Steve Harvey and his wife got into a fight?",
         jokePunchline: "It was a real family feud...",
         jokeRating: "G"
     },
