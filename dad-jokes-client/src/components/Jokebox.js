@@ -1,5 +1,7 @@
 // React imports
 import React, { useEffect, useState } from 'react';
+// Custom Hooks
+import useToggle from '../hooks/useToggle';
 // Custom imports
 import starterJokes from '../starterdata';
 // Styler imports
@@ -38,13 +40,22 @@ const useStyles = createUseStyles({
         height: '4rem',
         width: '7.5rem',
         margin: '0 10px 0 10px'
+    },
+    auto: {
+        marginTop: '20px',
+        fontSize: '2rem',
+        fontWeight: '900',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center'
     }
 });
 
 const Jokebox = () => {
     const classes = useStyles();
-    const [ joke, setJoke] = useState(starterJokes[Math.floor((Math.random() * starterJokes.length))]);
-    const [ hidden, setHidden] = useState(true);
+    const [joke, setJoke] = useState(starterJokes[Math.floor((Math.random() * starterJokes.length))]);
+    const [hidden, setHidden] = useState(true);
+    const [auto, toggleAuto] = useToggle(false)
 
 
     const getJoke = () => {
@@ -54,6 +65,14 @@ const Jokebox = () => {
 
     const punchLine = () => {
        setHidden(false);
+    }
+
+    const autoPlay = () => {
+        toggleAuto()
+        if (!auto) {
+            setTimeout(punchLine, 3000)
+            setTimeout(getJoke, 6000)
+        }
     }
 
     return (
@@ -88,9 +107,13 @@ const Jokebox = () => {
                 </button>
                 { /* add joke ratings with emojis to pick rating */}
             </div>
-            <div>
-            <input type="checkbox" id="scales" name="scales"/>
-            <label for="scales">Auto Jokes</label>
+            <div className={ classes.auto }>
+                <input 
+                    type="checkbox" 
+                    name="scales"
+                    checked={ auto }
+                    onChange={ autoPlay }/>
+                <label htmlFor="scales">Auto Jokes</label>
             </div>
         </div>
     )
