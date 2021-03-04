@@ -67,11 +67,12 @@ const Jokebox = () => {
        setHidden(false);
     }
 
+
     const autoPlay = () => {
         toggleAuto()
         if (!auto) {
-            setTimeout(punchLine, 3000)
-            setTimeout(getJoke, 6000)
+            punchLine()
+            getJoke()
         }
     }
 
