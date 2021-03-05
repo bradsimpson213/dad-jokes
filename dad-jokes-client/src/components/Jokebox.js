@@ -68,13 +68,27 @@ const Jokebox = () => {
     }
 
 
-    const autoPlay = () => {
-        toggleAuto()
-        if (!auto) {
-            punchLine()
-            getJoke()
+    // const autoPlay = () => {
+    //     toggleAuto()
+    //     if (!auto) {
+    //         punchLine()
+    //         getJoke()
+    //     }
+    // }
+
+
+    useEffect(() => {
+        if (auto){
+            const timer = setInterval(() => getJoke(), 5000);
+            const timer2 = setInterval(() => punchLine(), 2500);
+            const cancelTimers = [timer, timer2]
+            return () => clearInterval(cancelTimers);
         }
-    }
+    }, [joke]);
+  
+
+  
+  
 
     return (
         <div className={ classes.root }>
@@ -113,7 +127,7 @@ const Jokebox = () => {
                     type="checkbox" 
                     name="scales"
                     checked={ auto }
-                    onChange={ autoPlay }/>
+                    onChange={ toggleAuto }/>
                 <label htmlFor="scales">Auto Jokes</label>
             </div>
         </div>
