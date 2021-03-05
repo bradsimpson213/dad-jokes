@@ -68,22 +68,25 @@ const Jokebox = () => {
     }
 
 
-    // const autoPlay = () => {
-    //     toggleAuto()
-    //     if (!auto) {
-    //         punchLine()
-    //         getJoke()
-    //     }
-    // }
+    const autoJoke = () => {
+        toggleAuto()
+        if (hidden) {
+            punchLine();
+            setTimeout(()=> getJoke(), 3500);
+
+        } else {
+            getJoke();
+        };
+    }
 
 
     useEffect(() => {
         if (auto){
-            const timer1 = setInterval(() => getJoke(), 6000);
-            const timer2 = setInterval(() => punchLine(), 3000);
+            const timer1 = setInterval(() => getJoke(), 7000);
+            const timer2 = setInterval(() => punchLine(), 3500);
             const cancelBothIntervals = () => {
-                clearInterval(timer1)
-                clearInterval(timer2)
+                clearInterval(timer1);
+                clearInterval(timer2);
             }
             return () => cancelBothIntervals();
         }
@@ -113,6 +116,7 @@ const Jokebox = () => {
                     className={ classes.button }
                     style={{ backgroundColor: 'blue' }}
                     onClick={ punchLine }
+                    hidden={ auto }
                 >
                     Get Punchline
                 </button>
@@ -120,6 +124,7 @@ const Jokebox = () => {
                     className={ classes.button }
                     style={{ backgroundColor: 'green' }}
                     onClick={ getJoke }
+                    hidden={ auto }
                 >
                     Get New Joke
                 </button>
@@ -130,7 +135,7 @@ const Jokebox = () => {
                     type="checkbox" 
                     name="scales"
                     checked={ auto }
-                    onChange={ toggleAuto }/>
+                    onChange={ autoJoke }/>
                 <label htmlFor="scales">Auto Jokes</label>
             </div>
         </div>
