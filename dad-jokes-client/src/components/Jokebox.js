@@ -79,10 +79,13 @@ const Jokebox = () => {
 
     useEffect(() => {
         if (auto){
-            const timer = setInterval(() => getJoke(), 5000);
-            const timer2 = setInterval(() => punchLine(), 2500);
-            const cancelTimers = [timer, timer2]
-            return () => clearInterval(cancelTimers);
+            const timer1 = setInterval(() => getJoke(), 6000);
+            const timer2 = setInterval(() => punchLine(), 3000);
+            const cancelBothIntervals = () => {
+                clearInterval(timer1)
+                clearInterval(timer2)
+            }
+            return () => cancelBothIntervals();
         }
     }, [joke]);
   
