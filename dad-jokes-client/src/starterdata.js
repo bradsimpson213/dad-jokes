@@ -402,7 +402,21 @@ const starterJokes = [
         jokeBody: "I just watched a program about beavers...",
         jokePunchline: "It was the best dam program I've ever seen...",
         jokeRating: "PG"
-    }
+    },
+    {
+        jokeId: 68,
+        jokeBody: "I wrote a song about a tortilla...",
+        jokePunchline: "Well actually, it’s more of a wrap...",
+        jokeRating: "PG"
+    },
+    {
+        jokeId: 69,
+        jokeBody: "If you ever get cold, just stand in a corner...",
+        jokePunchline: "They’re usually 90 degrees....",
+        jokeRating: "PG"
+    },
+    
+    
 ];
 
 export default starterJokes;
