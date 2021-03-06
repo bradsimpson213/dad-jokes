@@ -390,6 +390,18 @@ const starterJokes = [
         jokeBody: "How did the hipster burn his mouth?",
         jokePunchline: "He ate the pizza before it was cool...",
         jokeRating: "PG"
+    },
+    {
+        jokeId: 66,
+        jokeBody: "What did the grape do when he got stepped on?",
+        jokePunchline: "He let out a little wine....",
+        jokeRating: "PG"
+    },
+    {
+        jokeId: 67,
+        jokeBody: "I just watched a program about beavers...",
+        jokePunchline: "It was the best dam program I've ever seen...",
+        jokeRating: "PG"
     }
 ];
 
