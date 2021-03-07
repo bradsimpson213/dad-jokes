@@ -12,6 +12,7 @@ const useStyles = createUseStyles({
         borderRadius: '15px',
         backgroundColor: 'azure',
         fontFamily: 'AmaticSC',
+        fontSize: '2rem',
         padding: '10px 45px 10px 45px'
     },
 });
