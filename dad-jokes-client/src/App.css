@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: 'AmaticSC';
-  src: url('./assets/AmaticSC-Regular.ttf') format('truetype');
+  src: url('./assets/AmaticSC-Bold.ttf') format('truetype');
 }
 
 @media (prefers-reduced-motion: no-preference) {

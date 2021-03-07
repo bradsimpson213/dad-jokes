@@ -412,10 +412,15 @@ const starterJokes = [
     {
         jokeId: 69,
         jokeBody: "If you ever get cold, just stand in a corner...",
-        jokePunchline: "They’re usually 90 degrees....",
+        jokePunchline: "They’re usually 90 degrees...",
         jokeRating: "PG"
     },
-    
+    {
+        jokeId: 70,
+        jokeBody: "I used to hate facial hair...",
+        jokePunchline: "But then it grew on me...",
+        jokeRating: "PG"
+    },
     
 ];
 
