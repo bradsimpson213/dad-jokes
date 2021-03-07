@@ -112,6 +112,10 @@ const Jokebox = () => {
                     { joke.jokePunchline }
                 </h1>
             </div>
+            <select>
+                    <option>G</option>
+                    <option>PG</option>
+            </select>
             <div className={ classes.buttonContainer }>
                 <button 
                     className={ classes.button }
@@ -121,6 +125,7 @@ const Jokebox = () => {
                 >
                     Get Punchline
                 </button>
+                
                 <button 
                     className={ classes.button }
                     style={{ backgroundColor: 'green' }}
