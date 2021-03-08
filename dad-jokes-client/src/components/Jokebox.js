@@ -55,8 +55,8 @@ const Jokebox = () => {
     const classes = useStyles();
     const [joke, setJoke] = useState(starterJokes[Math.floor((Math.random() * starterJokes.length))]);
     const [hidden, setHidden] = useState(true);
-    const [auto, toggleAuto] = useToggle(false)
-
+    const [auto, toggleAuto] = useToggle(false);
+    const [rating, changeRating] = useState(); 
 
     const getJoke = () => {
         setJoke(starterJokes[Math.floor((Math.random()*starterJokes.length))]);
@@ -113,10 +113,13 @@ const Jokebox = () => {
                 </h1>
             </div>
             <label htmlFor="rating-select">Rating Select: </label>
-            <select name="rating-select">
-                <option>All Jokes</option>
-                <option>G Rated Only</option>
-                <option>PG And Under</option>
+            <select 
+                name="rating-select"
+                onChange={ changeRating }
+            >
+                <option value="All">All Jokes</option>
+                <option value="G">G Rated Only</option>
+                <option value="PG">PG And Under</option>
             </select>
             <div className={ classes.buttonContainer }>
                 <button 
