@@ -112,7 +112,7 @@ const Jokebox = () => {
                     { joke.jokePunchline }
                 </h1>
             </div>
-            <label htmlFor="rating-select">Rating Select: </label>
+            {/* <label htmlFor="rating-select">Rating Select: </label>
             <select 
                 name="rating-select"
                 onChange={ changeRating }
@@ -120,7 +120,7 @@ const Jokebox = () => {
                 <option value="All">All Jokes</option>
                 <option value="G">G Rated Only</option>
                 <option value="PG">PG And Under</option>
-            </select>
+            </select> */}
             <div className={ classes.buttonContainer }>
                 <button 
                     className={ classes.button }

@@ -23,6 +23,8 @@ const APIDocs = () => {
     return (
         <div className={ classes.root}>
             <h2>API DOCS HERE</h2>
+            <p>Dad Jokes API is free to use, no API key needed.</p>
+            <p>Use dad-jokes/getrandomjoke to return a random joke with the following format:</p>
         </div>
     )
 };

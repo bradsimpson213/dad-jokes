@@ -106,6 +106,15 @@ const JokeForm = () => {
                         onChange={ setPunchline }
                     />
                 </div>
+                <div>
+                    <label htmlFor="rating-select">Rating Select: </label>
+                    <select 
+                        name="rating-select"
+                    >
+                        <option value="G">Rated G</option>
+                        <option value="PG">Rated PG</option>
+                    </select>
+                </div>
                 <button
                     className={ classes.button } 
                     type="submit"
