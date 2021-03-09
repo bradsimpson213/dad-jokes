@@ -48,6 +48,14 @@ const useStyles = createUseStyles({
         height: '4rem',
         width: '7.5rem',
         margin: '0 10px 0 10px'
+    },
+    selectRating: {
+        fontSize: '1.5rem',
+        margin: '0 0 15px 0',
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center'
     }
 });
 
@@ -106,10 +114,11 @@ const JokeForm = () => {
                         onChange={ setPunchline }
                     />
                 </div>
-                <div>
+                <div className={ classes.selectRating }>
                     <label htmlFor="rating-select">Rating Select: </label>
                     <select 
                         name="rating-select"
+                        style={{height: '35px'}}
                     >
                         <option value="G">Rated G</option>
                         <option value="PG">Rated PG</option>
