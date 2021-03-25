@@ -55,9 +55,11 @@ const useStyles = createUseStyles({
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
     }
 });
+
+
 
 const JokeForm = () => {
     const classes = useStyles();
