@@ -53,10 +53,14 @@ const useStyles = createUseStyles({
 
 const Jokebox = () => {
     const classes = useStyles();
-    const [joke, setJoke] = useState(starterJokes[Math.floor((Math.random() * starterJokes.length))]);
+    const [joke, setJoke] = useState();
     const [hidden, setHidden] = useState(true);
     const [auto, toggleAuto] = useToggle(false);
     const [rating, changeRating] = useState(); 
+
+    useEffect( ()=> {
+        getJoke()
+    }, [])
 
     const getJoke = () => {
         setJoke(starterJokes[Math.floor((Math.random()*starterJokes.length))]);
@@ -104,12 +108,12 @@ const Jokebox = () => {
                 <h1 
                     className={ classes.jokeText }
                 >
-                    { joke.jokeBody }
+                    { joke ? joke.jokeBody : '' }
                 </h1>
                 <h1 
                     style={ hidden ? { opacity: '0', transition: 'None' } : { opacity: '1', transition: 'opacity 2.0s' } }
                 >
-                    { joke.jokePunchline }
+                    { joke ? joke.jokePunchline : '' }
                 </h1>
             </div>
             {/* <label htmlFor="rating-select">Rating Select: </label>
